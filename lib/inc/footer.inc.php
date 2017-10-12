@@ -1,4 +1,7 @@
 <footer>
+   <div class="free">
+       <figure><img src="lib/img/freeTee.jpg"></figure>
+      </div>
    <ul>
       <li class="icon-container">
          <a href="https://www.facebook.com/britanny.cadle.1">

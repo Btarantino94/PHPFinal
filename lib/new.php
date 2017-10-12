@@ -18,14 +18,14 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
   <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/reset.css" />
   <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-  <title>on sale page</title>
+  <title>new page</title>
   <!-- head holds metadata -->
 </head>
 
-<body class="new_body">
+<body class="product_body">
   <?php include 'lib/inc/header.inc.php'; ?>
 
-  <div class="cont">
+  <div>
     <div class="page-head">
       <h1 class="productpage_h1">New Products</h1>
 
