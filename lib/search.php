@@ -1,28 +1,16 @@
-<?php
-require "lib/inc/db.inc.php";
-
-?>
-
 <!DOCTYPE html>
 <html>
    <head>
-      <!-- css start -->
-      <link type="text/css" rel="stylesheet" href="lib/css/reset.css" />
-      <link type="text/css" rel="stylesheet" href="lib/css/styles.css" />
-      <!-- css ends-->
-      <!-- google font -->
-      <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-
+      <link type="text/css" rel="stylesheet" href="/lib/css/reset.css"/>
+      <link type="text/css" rel="stylesheet" href="/lib/css/styles.css"/>
+      <script src="/biography/lib/js/jsfilehere.js" type="text/javascript"></script>
       <title>search page</title>
    </head>
-
    <body class="search_body">
- <!-- header start -->
       <?php
-include 'lib/inc/header.inc.php';
+include './header.html';
  ?>
-<!-- header end -->
-      <section>
+      <section id="search-hero">
          <div class="container align-center">
             <h2 class="search__headline">Looking for something? Search here.</h2>
          </div>
@@ -39,10 +27,10 @@ include 'lib/inc/header.inc.php';
             </div>
          </div>
       </section>
-      
       <?php
-include 'lib/inc/footer.inc.php';
+include './footer.html';
  ?>
-      
+      <script type="text/javascript" src="jqhome.js"></script>
+      <script type="text/javascript" src="formjsfile"></script>
    </body>
 </html>
