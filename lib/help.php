@@ -20,16 +20,16 @@
       <h1 id="Help_title">ASK US A QUESTION</h1>
       <div id="Help">
             <?php
-                 if(!empty($_GET)){
+                 if(!empty($_POST)){
                   try
                   {
                     $info = 'INSERT INTO contacts(message, fname, lname, email)
                     VALUES( :message,:fname, :lname, :email)';
                     $userInput = $db->prepare($info);
-                    $userInput->bindParam(':fname',strip_tags($_GET['firstname']));
-                    $userInput->bindParam(':lname',strip_tags($_GET['lastname']));
-                    $userInput->bindParam(':email',strip_tags($_GET['email']));
-                    $userInput->bindParam(':message',strip_tags($_GET['message']));
+                    $userInput->bindParam(':fname',strip_tags($_POST['firstname']));
+                    $userInput->bindParam(':lname',strip_tags($_POST['lastname']));
+                    $userInput->bindParam(':email',strip_tags($_POST['email']));
+                    $userInput->bindParam(':message',strip_tags($_POST['message']));
                     $userInput->execute();
                   } catch(Exception $e){
                     echo $e->getMessage();
