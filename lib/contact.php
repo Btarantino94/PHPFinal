@@ -37,8 +37,9 @@
             <p class="contact_ans">~Most shipments leave our warehouse within 1-2 business days of placing your order. You will also need to consider the transit time for the shipping method you chose..</p>
             </div>
             <p class="form_header">NEED MORE HELP?</p>
-            <p class="contact_help">Send us an email below or contact us by Snail Mail or Phone: Phone #: 1-800-GEEK CHIC1</p>
-            <p class="contact_help">Address: GeekChic, Inc. 224 ToHire Rd Suite 100 FortMill, SC 28055s</p>
+            <p class="contact_help">Send us an email below or contact us by Snail Mail or Phone: </p>
+            <p class="contact_pnumber" >Phone #: 1-800-GEEK CHIC</p>
+            <p class="contact_help">Address: GeekChic, Inc. 224 ToHire Rd Suite 100 FortMill, SC 28055</p>
             <div id="row">
                <form method="POST" autocomplete="on" id="contact-form" name="contact-form" action="https://formspree.io/britanny_tea2@aol.com">
                   <!--  in the input below I am giving the input a class col-md-6 and col-sm-12  which will span half the screen on mobile phone (md) and 1/2 of the screen on tablets(sm) -->

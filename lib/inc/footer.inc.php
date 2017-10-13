@@ -1,5 +1,5 @@
 <footer>
-<section id="footer_container">
+<div id="footer_container">
    <div class="free">
        <a href="product.php"><figure><img src="img/freeTee.jpg" alt="free tee banner"></figure></a>
    </div>
@@ -63,5 +63,5 @@
    <p class="footer_text">Britanny Tarantino 2017</p>
    <p class="footer_text">© COPYRIGHT GEEKCHIC, INC. ALL RIGHTS RESERVED</p>
    <p class="footer_text">This webpage is for educational purposes only.</p>
-   </section>
+   </div>
 </footer>

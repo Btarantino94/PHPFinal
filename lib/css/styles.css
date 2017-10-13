@@ -629,7 +629,9 @@ img{
 .product_tag{
 display: block;
 }
-
+.img-responsive{
+  
+}
 .myproducts > ul > li {
     margin-bottom: 15px;
     width: 180px;
@@ -815,6 +817,7 @@ figcaption{
   text-align: center;
   color: #c9262c;
   margin-top: 7%;
+  margin-bottom: 2%;
 }
 /*#btnEmpty:hover{
   color: #c9262c;
@@ -842,10 +845,11 @@ figcaption{
 .table_cart {
     text-align: center;
     border-bottom: #c9272d 1px solid;
-    margin-left: 30%;
+    margin-left: 26%;
     margin-top: 5%;
     margin-bottom: 17%;
 }
+
 /*****************************Cart Page End****************************************/
 
 /*****************************Help Page Start****************************************/
@@ -870,6 +874,28 @@ figcaption{
  padding-left: 17%;
  padding-right: 15%;
 
+}
+.help_input{
+    width: 100%;
+    background-color: gainsboro;
+    outline: none;
+    height: 40px;
+    color: #3a3a3a;
+}
+.help_message{
+    width: 100%;
+    background-color: gainsboro;
+    outline: none;
+    height: 114px;
+    color: #3a3a3a;
+}
+.help_submit{
+    width: 100%;
+    background-color: white;
+    outline: none;
+    height: 40px;
+    color: #3a3a3a;
+    margin-bottom: 30%;
 }
 .form_header{
     font-size: 52px;
@@ -1015,6 +1041,36 @@ figcaption{
     padding-right: 18%;
     margin-bottom: 5%;
 }
+.col-sm-12{
+  width: 50%;
+    background-color: gainsboro;
+    outline: none;
+    height: 114px;
+    color: #3a3a3a;
+  }
+  .col-md-6{
+      width: 100%;
+    background-color: gainsboro;
+    outline: none;
+    height: 40px;
+    color: #3a3a3a;
+  }
+  input[type=submit].btn-block {
+    width: 100%;
+    background-color: white;
+    outline: none;
+    height: 40px;
+    color: #3a3a3a;
+  }
+  .contact_pnumber{
+    font-size: 20px;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+    line-height: 1.5;
+    padding-left: 19%;
+    padding-right: 18%;
+    margin-bottom: 5%;
+  }
 
 /* Mobile and tablet configs */
 

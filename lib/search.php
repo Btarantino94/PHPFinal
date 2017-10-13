@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<?php
-require "inc/db.inc.php";
+<?php require "inc/db.inc.php";?>
 
-?>s
     <html>
 
     <head>
@@ -19,24 +17,20 @@ require "inc/db.inc.php";
 
     <body class="search_body">
         <!-- header start -->
-        <?php
-include 'inc/header.inc.php';
-
-?>
+        <?php include 'inc/header.inc.php';?>
             <!-- header end -->
-    <section>
-        <div class="search_con">
-            <h2 class="search__headline">Looking for something? Search here.</h2>
-            <p id="sub_search">You may search either by category, name or price.</p>
-            
-            <!-- form starts here -->
-            <form method="_GET" action="search.php">
-                   <input type="text" name="search_Bar">
-            <input type="submit" value="Search">     
-                <?php
+            <section>
+                <div class="search_con">
+                    <h2 class="search__headline">Looking for something? Search here.</h2>
+                    <p id="sub_search">You may search either by category, name or price.</p>
 
-                    if (isset($_GET['search_Bar']))
-                    {
+                    <!-- form starts here -->
+                    <form method="_GET" action="search.php">
+                        <input type="text" name="search_Bar">
+                        <input type="submit" value="Search">
+                        <?php
+
+                    if (isset($_GET['search_Bar'])){
                         //strip_tags — Strip HTML and PHP tags from a string
                         $type = strip_tags($_GET['search_Bar']);
                         //selecting all products from my name col and allowing wildcards to be searched.
@@ -46,8 +40,7 @@ include 'inc/header.inc.php';
                         //executing my prepare
                         $product_Inv->execute();
                         //fetching all products from my select
-                        foreach($product_Inv->fetchAll() as $product)
-                        {
+                        foreach($product_Inv->fetchAll() as $product){
                             //echoing my products
                             echo "
                                     <div class='search'>
@@ -63,16 +56,13 @@ include 'inc/header.inc.php';
                     }
 
                 ?>
-            </form>
-        </div>
-      <!-- container -->
-    </section>
-      <!-- search-hero -->
+                    </form>
+                </div>
+                <!-- container -->
+            </section>
+            <!-- search-hero -->
 
-            <?php
-include 'inc/footer.inc.php';
-
-?>
+            <?php include 'inc/footer.inc.php';?>
 
     </body>
 

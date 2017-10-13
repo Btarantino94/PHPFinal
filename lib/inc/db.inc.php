@@ -11,8 +11,8 @@ try{
 
 } catch (PDOException $e) {
   
-  echo "Can't Connect: ".$e->getMessage();
-  exit;
+	echo "Can't Connect: ".$e->getMessage();
+	exit;
 
 }
 

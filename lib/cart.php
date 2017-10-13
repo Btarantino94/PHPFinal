@@ -8,6 +8,7 @@ session_start();
 
 require_once ("inc/db.inc.php");
 
+error_reporting(0);
 
 // php function to clean up a string from a user to make it safe for a database
 $action = filter_var($_GET['action'], FILTER_SANITIZE_STRING);
@@ -15,6 +16,7 @@ $productId = filter_var($_GET['productId'], FILTER_SANITIZE_STRING);
 $name = filter_var($_GET['name'], FILTER_SANITIZE_STRING);
 $quantity = filter_var($_GET['quantity'], FILTER_SANITIZE_STRING);
 $price = filter_var($_GET['price'], FILTER_SANITIZE_STRING);
+
 
 //if action is not empty switch (switch is similar to a series of IF statements on the same expression) action else if add is used then add to cart or else if remove is used remove items from cart.
 // switch/case is like "if else if" it does loose comparison.
@@ -119,79 +121,79 @@ function removeItemsfromCart($productId){
 
 ?>
 <html>
+
 <head>
-  <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/reset.css" />
-  <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-  <title>Cart</title>
+    <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+    <title>Cart</title>
 </head>
 <?php include 'inc/header.inc.php'; ?>
+
 <body>
-<div id="shopping-cart">
-<div>
-	<p class="cart-heading">Shopping Cart</p>
-<?php
+    <div id="shopping-cart">
+        <div>
+            <p class="cart-heading">Shopping Cart</p>
+            <?php
 
 
-if (isset($_SESSION["cart_items"])) {
-	$item_total = 0;
+				if (isset($_SESSION["cart_items"])) {
+					$item_total = 0;
 
-?>	
-<table class="table_cart" cellpadding="10" cellspacing="1">
-<tbody>
-<tr>
-<th class="cart_th"><strong>Name</strong></th>
-<th class="cart_th"><strong>productId</strong></th>
-<th class="cart_th"><strong>Quantity</strong></th>
-<th class="cart_th"><strong>Price</strong></th>
-<th class="cart_th"><strong>Action</strong></th>
-</tr>	
-
-<?php
-	foreach($_SESSION["cart_items"] as $item) {
-?>
-
-				<tr>
-					<td class="cart_td">
-						<strong><?php echo $item["name"]; ?></strong>
-					</td>
-					<td class="cart_td">
-						<?php echo $item["productId"]; ?>
-					</td>
-					<td class="cart_td">
-						<?php echo $item["quantity"]; ?>
-					</td>
-					<td class="cart_td">
-						<?php echo "$" . $item["price"]; ?>
-					</td>
-					<td class="cart_td">
-						<a href="cart.php?action=remove&productId=
-						<?php echo $item["productId"]; ?>" class="btnRemoveAction">
-							Remove Item
-						</a>
-					</td>
-				</tr>
+				?>
+	                <table class="table_cart" cellpadding="10" cellspacing="1">
+	                    <tbody>
+	                        <tr>
+	                            <th class="cart_th"><strong>Name</strong></th>
+	                            <th class="cart_th"><strong>productId</strong></th>
+	                            <th class="cart_th"><strong>Quantity</strong></th>
+	                            <th class="cart_th"><strong>Price</strong></th>
+	                            <th class="cart_th"><strong>Action</strong></th>
+	                        </tr>
 				<?php
-		$item_total+= ($item["price"] * $item["quantity"]);
-	}
+					foreach($_SESSION["cart_items"] as $item) {
+				?>
 
-?>
+							<tr>
+								<td class="cart_td">
+									<strong><?php echo $item["name"]; ?></strong>
+								</td>
+								<td class="cart_td">
+									<?php echo $item["productId"]; ?>
+								</td>
+								<td class="cart_td">
+									<?php echo $item["quantity"]; ?>
+								</td>
+								<td class="cart_td">
+									<?php echo "$" . $item["price"]; ?>
+								</td>
+								<td class="cart_td">
+									<a href="cart.php?action=remove&productId=
+									<?php echo $item["productId"]; ?>" class="btnRemoveAction">
+										Remove Item
+									</a>
+								</td>
+							</tr>
+				<?php
+						$item_total+= ($item["price"] * $item["quantity"]);
+					}
+				?>
 
-<tr>
-<td colspan="5" align=right><strong>Total:</strong> <?php
-	echo "$" . $item_total; ?></td>
-</tr>
-</tbody>
-</table>		
-</div>
-</div>
+							<tr>
+							<td colspan="5" align=right><strong>Total:</strong> <?php
+								echo "$" . $item_total; ?></td>
+							</tr>
+						</tbody>
+					</table>		
+		</div>
+	</div>
 
-  <?php
-  // echo 'session<br />';
+			  <?php
+			  // echo 'session<br />';
 
-}
+			}
 
-?>
+			?>
 <!-- </div> -->
 <?php include 'inc/footer.inc.php'; ?>
 

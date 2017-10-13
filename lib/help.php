@@ -20,16 +20,16 @@
       <h1 id="Help_title">ASK US A QUESTION</h1>
       <div id="Help">
             <?php
-                 if(!empty($_POST)){
+                 if(!empty($_GET)){
                   try
                   {
                     $info = 'INSERT INTO contacts(message, fname, lname, email)
                     VALUES( :message,:fname, :lname, :email)';
                     $userInput = $db->prepare($info);
-                    $userInput->bindParam(':fname',strip_tags($_POST['firstname']));
-                    $userInput->bindParam(':lname',strip_tags($_POST['lastname']));
-                    $userInput->bindParam(':email',strip_tags($_POST['email']));
-                    $userInput->bindParam(':message',strip_tags($_POST['message']));
+                    $userInput->bindParam(':fname',strip_tags($_GET['firstname']));
+                    $userInput->bindParam(':lname',strip_tags($_GET['lastname']));
+                    $userInput->bindParam(':email',strip_tags($_GET['email']));
+                    $userInput->bindParam(':message',strip_tags($_GET['message']));
                     $userInput->execute();
                   } catch(Exception $e){
                     echo $e->getMessage();
@@ -57,21 +57,23 @@
                    <div id="help_first">
                       <p class="sub_hel">one of our customer service peeps will get back to you fast. We aim to respond to all email within 24 hours.</p>
                     <div class="form-text">
-                      <label for="fname">First Name<input type="text" id="fname" name="firstname" placeholder="John" required/></label>
+                      <label for="fname">First Name
+                        <input class="help_input" type="text" id="fname" name="firstname" placeholder="John" required/></label>
                     </div>
                     <div class="form-text">
-                      <label for="lname">Last Name</label>
-                      <input type="text" id="lname" name="lastname" placeholder="Smith" required/>
+                      <label for="lname">Last Name
+                      <input class="help_input" type="text" id="lname" name="lastname" placeholder="Smith" required/></label>
                     </div>
                     <div class="form-text">
-                      <label for="email">Email<input type="email" id="email" name="Geekchic@email.com" placeholder="Email" required/></label>
+                      <label for="email">Email
+                        <input class="help_input" type="email" id="email" name="Geekchic@email.com" placeholder="Email" required/></label>
                     </div>
                     <div class="form-text">
                       <p>Question:</p>
-                    <textarea placeholder="Please ask your question here..." cols="80" rows="10" name="message" id="message" required></textarea>
+                    <textarea placeholder="Please ask your question here..." class="help_message" cols="80" rows="10" name="message" id="message" required></textarea>
                   </div>
                   <div class="form-button">
-                   <input type="submit" name="submit" value="Submit"/>
+                   <input class="help_submit" type="submit" name="submit" value="Submit"/>
                  </div>
                    </form>
                  <?php } ?>
@@ -84,5 +86,5 @@
 include 'inc/footer.inc.php';
  ?>
  </body>
-
+</html>
 </html>
