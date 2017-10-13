@@ -78,7 +78,7 @@ nav li {
 .topnav-dropdown {
     display: none;
     position: absolute;
-    top: 19px;
+    top: 32px;
     left: -27px;
     background: #c9272d;
     padding: 4px;
@@ -241,11 +241,11 @@ footer {
 }
 #comingsoon{
   max-width: 100%;
-  padding-left: 2%;
+  padding-left: 12%;
 }
 #starwars{
   max-width: 100%;
-  padding-left: 12%;
+  padding-left: 20%;
 }
 .ad_con{
   max-width: 100%;
@@ -491,7 +491,7 @@ img{
     text-decoration: none;
 }
 .button_con{
-    margin-top: -20%;
+    margin-top: -12%;
     margin-left: 50%;
     width: 54%;
     float: left;
@@ -858,7 +858,7 @@ figcaption{
     text-align: center;
     color: #c9262c;
     margin-top: 4%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 .sub_hel{
     margin: 1%;
