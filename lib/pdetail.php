@@ -76,15 +76,15 @@ catch(PDOException $e){
                             <img src="<?php echo $product[0]['image'] ?>">
 
                         </div>
-                        <div class="product_image_small">
+                        <!-- <div class="product_image_small"> -->
 
-                            <div class="product_image_2">
+                            <!-- <div class="product_image_2">
                                 <img src="<?php echo $product[0]['image'] ?>">
-                            </div>
+                            </div> -->
 
-                            <div class="product_image_3">
+                            <!-- <div class="product_image_3">
                                 <img src="<?php echo $product[0]['image'] ?>">
-                            </div>
+                            </div> -->
                             <!-- pictures of main shirt start -->
 
                         </div>
@@ -111,7 +111,7 @@ catch(PDOException $e){
                         <!-- form starts here -->
                         <div class="product-item">
                             <form method="get" action="cart.php">
-                                <div class="options">
+                                <!-- <div class="options">
                                     <div class="buying_options">
                                         <div class="select">
                                             <select id="type">
@@ -134,11 +134,11 @@ catch(PDOException $e){
                            <option value = "3">green</option>
                            <option value = "4">grey</option>
                            <option value = "5">white</option>
-                         </select>
-                                        </div>
-                                    </div>
-                                    <!-- buying options -->
-                                </div>
+                         </select> -->
+                                        <!-- </div> -->
+                                    <!-- </div> -->
+                                    <!-- buying options
+                                </div> -->
 
                         </div>
                     </div>
@@ -157,25 +157,25 @@ catch(PDOException $e){
                     <!-- change class name -->
                     </form>
                 </div>
-                <div class="bottom">
+                <!-- <div class="bottom">
                     <div class="reviews">
-                        <div class="head">
+                        <div class="head"> -->
                             <!-- specific product reveiw -->
-                            <h2>Reviews</h2>
+                            <!-- <h2>Reviews</h2>
                         </div>
-                        <div class="content">
+                        <div class="content"> -->
                             <!-- fa fa-star-o are the stars -->
-                            <span class="stars"><i class="fa fa-star fa-1x"></i><i class="fa fa-star fa-1x"></i><i class="fa fa-star fa-1x"></i><i class="fa fa-star-half-o fa-1x"></i><i class="fa fa-star-o fa-1x"></i></span>
+                           <!--  <span class="stars"><i class="fa fa-star fa-1x"></i><i class="fa fa-star fa-1x"></i><i class="fa fa-star fa-1x"></i><i class="fa fa-star-half-o fa-1x"></i><i class="fa fa-star-o fa-1x"></i></span>
                             <p class="review_text">Sweet product, great fit, good quality. I wear it to the gym alot...</p>
                             <p class="fullReview"><a href="#">View Full Review</a></p>
                         </div>
                     </div>
                     <div class="related">
-                        <div class="head">
+                        <div class="head"> -->
                             <!-- other related products -->
-                            <h2>Related Products</h2>
-                        </div>
-                        <div class="content">
+                            <!-- <h2>Related Products</h2> -->
+                        <!-- </div> -->
+                        <!-- <div class="content">
                             <div class="relatedProducts">
                                 <div class="products">
                                     <h4 class="title">Bio</h4>
@@ -201,7 +201,7 @@ catch(PDOException $e){
                             </div>
                         </div>
                     </div>
-
+ -->
           <?php
   include 'inc/footer.inc.php';
 

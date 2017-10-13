@@ -50,7 +50,7 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
         </ul>
       </div>
     </div>
-    <section id="sidebar">
+    <!-- <section id="sidebar">
       <h3>CATEGORIES</h3>
     <div class="checklist categories">
       <ul>
@@ -99,7 +99,7 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
      <h3>PRICE RANGE</h3>
      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/price-range.png" alt="" />
 </div>
-    </section>
+    </section> -->
 </div>
 
     <?php include 'inc/footer.inc.php'; ?>

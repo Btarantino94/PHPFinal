@@ -381,8 +381,9 @@ img{
    width:100%;
    border:2px solid #fff;
    border-radius:3px;
+   margin-bottom: 30%;
 }
-#product_layout_1 .product_images .product_image_small{
+/*#product_layout_1 .product_images .product_image_small{
   width:100%;
   margin-top:15px;
 }
@@ -399,7 +400,7 @@ img{
   float:left;
   margin-right:4%;
   box-sizing:border-box;
-}
+}*/
 /*#product_layout_1 .product_images .product_image_small .product_image_4{
   width:30%;
   border:1px solid white;
@@ -417,6 +418,7 @@ img{
     font-size: 1.8em;
     display: inline-block;
     padding: 41px 0px 34px;
+    margin-top: 1%;
 }
 }
 #product_layout_1 .product_info .rating{
@@ -441,7 +443,7 @@ img{
   float:left;
   margin-left:10%;
 }
-#product_layout_1 .product_info .buying_options .select{
+/*#product_layout_1 .product_info .buying_options .select{
   width: 80%;
   max-width:300px;
   height: 40px;
@@ -449,8 +451,8 @@ img{
   background: url('https://i.imgur.com/10e9Roz.png') no-repeat right #fff;
   border: 2px solid #ccc;
   border-radius:30px;
-  margin-top:15px;  
-}
+  margin-top:15px; */ 
+/*}*/
 #product_layout_1 .product_info .buying_options select{
   background: transparent;
   display:block;
@@ -494,7 +496,7 @@ img{
     width: 54%;
     float: left;
 }
-#product_layout_1 .reviews{
+/*#product_layout_1 .reviews{
   width:30%;
   float:left;
   border:2px solid #c9262c;
@@ -521,12 +523,12 @@ img{
 }
 #product_layout_1 .reviews .content .name{
   font-size:1.8em;
-}
+}*/
 /*#product_layout_1 .reviews .content .stars{
   color:gold;
   margin-left:15px;
 }*/
-#product_layout_1 .reviews .content .writeReview a{
+/*#product_layout_1 .reviews .content .writeReview a{
  display:block;
  font-size:1.4em;
  text-align:center;
@@ -556,11 +558,11 @@ img{
   height: 200px;
 }
 #product_layout_1 .related .products{
-  text-align:center;
+  text-align:center;*/
   /*width:30%;
   float:left;*/
-  box-sizing:border-box;
-}
+ /* box-sizing:border-box;*/
+/*}
 #product_layout_1 .related .products .title{
   font-size:1.2em;
   line-height:1;
@@ -571,12 +573,12 @@ img{
   border:2px solid #c9262c;
   margin-top:-5px;
   cursor:pointer;
-}
+}*//*
 #product_layout_1 .related .products .price{
   color: #000;
   font-size:1em;
   margin-top:-2px;
-}
+}*/
 .fa{
   color: gold;
 }
