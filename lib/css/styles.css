@@ -17,7 +17,7 @@
     }
     .topnav {
         position: relative;
-        font-size: 20px;
+        font-size: 30px;
     }
     .topnav li a {
         padding: 20px 10px;
@@ -63,7 +63,7 @@ nav li {
 }
 .topnav {
     position: relative;
-    font-size: 20px;
+    font-size: 30px;
 }
 .topnav li {
     display: inline-block;
@@ -184,7 +184,7 @@ footer {
 
 .homepage_hero_headline {
     padding-top: 20vh;
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
     text-shadow: 1px 5px 1px rgba(0, 0, 0, .1);
     font-family: 'Kaushan Script', cursive;
@@ -198,7 +198,7 @@ footer {
     padding-right: 4vh;
     color: #000;
     line-height: 1;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(191, 99, 25, .8);
     font-family: 'Kaushan Script', cursive;
@@ -210,7 +210,7 @@ footer {
     padding-right: 4vh;
     color: #000;
     line-height: 1;
-    font-size: 40px;
+    font-size: 50px;
     text-align: center;
     text-shadow: 1px 2px 1px rgba(191, 99, 25, .8);
     font-family: 'Kaushan Script', cursive;
@@ -218,7 +218,7 @@ footer {
 #feat_sub{
     color: #000;
     line-height: 1;
-    font-size: 20px;
+    font-size: 30px;
     text-align: center;
     font-family: 'Kaushan Script', cursive;
 }
@@ -265,7 +265,7 @@ footer {
   text-align: center;
   color: #000;
   line-height: 2;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   font-family: 'Kaushan Script', cursive;
   
@@ -280,14 +280,14 @@ footer {
 
 .search__headline{
   font-family: 'Kaushan Script', cursive;
-  font-size: 42px;
+  font-size: 52px;
   text-align: center;
   color: #c9262c;
   margin-bottom: 2%;
 }
 #sub_search{
   font-family: 'Kaushan Script', cursive;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 2%;
 }
@@ -319,7 +319,7 @@ footer {
     text-align: center;
     border-radius: 10%;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 25px;
     line-height: 3px;
 }
 .wrap {
@@ -407,7 +407,7 @@ img{
   float:left;
 }*/
 #product_layout_1 .product_info h1{
-  font-size:3em;
+  font-size:4em;
   line-height:.8;
 }
 #product_layout_1 .product_info .price{
@@ -415,7 +415,7 @@ img{
 }
 #product_layout_1 .product_info .original_price {
     color: #000;
-    font-size: 1.8em;
+    font-size: 2em;
     display: inline-block;
     padding: 41px 0px 34px;
     margin-top: 1%;
@@ -426,7 +426,7 @@ img{
   color:goldenrod;
 }
 #product_layout_1 .product_info .product_description{
- font-size:1em;
+ font-size:1.8em;
 }
 #product_layout_1 .product_info .related_info span{
   margin-right:5%;
@@ -458,7 +458,7 @@ img{
   display:block;
   width: 268px;
  padding-left: 20px;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 1;
   border: 0;
   border-radius:0;
@@ -466,7 +466,7 @@ img{
   -webkit-appearance: none;
 }
 #product_layout_1 .product_info .buying .quantity{
-  font-size:15px;
+  font-size:25px;
   display:block;
 }
 #product_layout_1 .product_info .buying .quantity [type="text"]{
@@ -476,7 +476,7 @@ img{
   border-radius:3px;
   padding:10px;
   box-sizing:border-box;
-  font-size:1em;
+  font-size:1.8em;
 }
 #product_layout_1 .product_info .buying .cart{
     margin-top: 11px;
@@ -485,7 +485,7 @@ img{
     background-color: #00a900;
 }
 .btnAddAction{
-    font-size: 20px;
+    font-size: 30px;
     color: #FFF;
     background: #00a900;
     text-decoration: none;
@@ -611,7 +611,7 @@ img{
 }
 
 .productpage_h1 {
-  font-size: 42px;
+  font-size: 52px;
   margin: 0 0 20px;
   color: #c9262c;
   font-family: 'Kaushan Script', cursive;
@@ -673,7 +673,7 @@ text-decoration: none;
   transform: scale3d(1.1, 1.1, 1.1);
 }*/
 figcaption{
-  font-size: 16px;
+  font-size: 20px;
   color: #000;
   text-decoration: none;
 }
@@ -695,7 +695,7 @@ figcaption{
     padding-bottom: 30px;
 }
 .checklist ul li{ 
-  font-size:14px;
+  font-size:20px;
   font-weight:400;
   list-style:none;
 }
@@ -811,7 +811,7 @@ figcaption{
 /*****************************Cart Page Start****************************************/
 .cart-heading{
   font-family: 'Kaushan Script', cursive;
-  font-size: 42px;
+  font-size: 52px;
   text-align: center;
   color: #c9262c;
   margin-top: 7%;
@@ -821,7 +821,7 @@ figcaption{
 }*/
 .cart_th{
   font-family: 'Kaushan Script', cursive;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   padding: 5%;
 }
@@ -834,7 +834,7 @@ figcaption{
 }
 .txt-heading{
     font-family: 'Kaushan Script', cursive;
-  font-size: 30px;
+  font-size: 40px;
   text-align: center;
   color: #c9262c;
   margin-top: 7%;
@@ -854,7 +854,7 @@ figcaption{
 }
 #Help_title{
     font-family: 'Kaushan Script', cursive;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
     color: #c9262c;
     margin-top: 4%;
@@ -862,7 +862,7 @@ figcaption{
 }
 .sub_hel{
     margin: 1%;
-  font-size: 20px;
+  font-size: 30px;
   margin: 0 0 20px;
   font-family: 'Kaushan Script', cursive;
 }
@@ -872,7 +872,7 @@ figcaption{
 
 }
 .form_header{
-    font-size: 42px;
+    font-size: 52px;
   margin: 0 0 20px;
   color: #c9262c;
   font-family: 'Kaushan Script', cursive;
@@ -889,7 +889,7 @@ figcaption{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     border-color: #ccc;
     margin-top: 2%;
     color: rgb(58, 58, 58);
@@ -902,7 +902,7 @@ figcaption{
 }
 .form-button {
   padding: 10px;
-  font-size: 16px;
+  font-size: 20px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
@@ -944,7 +944,7 @@ figcaption{
 
 /*****************************contact page start****************************************/
 #contact_title{
-  font-size: 42px;
+  font-size: 52px;
   margin: 0 0 20px;
   color: #c9262c;
   font-family: 'Kaushan Script', cursive;
@@ -968,14 +968,14 @@ figcaption{
 }
 .sub_contact{
   margin: 1%;
-  font-size: 20px;
+  font-size: 30px;
   margin: 0 0 20px;
   font-family: 'Kaushan Script', cursive;
 }
 .quest_title{
   margin-top: 1%;
   margin-bottom: 2%;
-  font-size: 17px;
+  font-size: 20px;
   text-align: center;
   line-height: 1.5;
   color: #c9262c;
@@ -989,7 +989,7 @@ figcaption{
   margin-bottom: 70px;
 }
 .contact_ques{
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Kaushan Script', cursive;
     text-align: left;
     line-height: 1.5;
@@ -998,7 +998,7 @@ figcaption{
     margin-bottom: 5%;
 }
 .contact_ans{
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Kaushan Script', cursive;
     text-align: left;
     line-height: 1.5;
@@ -1007,7 +1007,7 @@ figcaption{
     margin-bottom: 5%;
 }
 .contact_help{
-    font-size: 15px;
+    font-size: 20px;
     font-family: 'Kaushan Script', cursive;
     text-align: left;
     line-height: 1.5;
@@ -1024,11 +1024,11 @@ figcaption{
     padding-right: 20px;
   }
   #contact-title {
-    font-size: 26px;
+    font-size: 30px;
     font-family: 'Kaushan Script', cursive;
   }
   #contact-first {
-    font-size: 16px;
+    font-size: 20px;
   }
   /*from help page*/
   .form-wrapper {
@@ -1054,11 +1054,11 @@ figcaption{
 }
 @media all and (min-width: 768px) and (max-width: 992px) {
   #contact-title {
-    font-size: 26px;
+    font-size: 30px;
     font-family: 'Kaushan Script', cursive;
   }
   #contact-first {
-    font-size: 16px;
+    font-size: 20px;
   }
   /*from help page*/
   .form-wrapper {

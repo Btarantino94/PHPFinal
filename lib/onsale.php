@@ -36,10 +36,10 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
               <figure>
                 <img class="img-responsive" src='<?php echo $product['image']?>'>
                 <figcaption>Price $<?php echo $product['price']?>
-                  </br>
+                  <br>
                   </br>
                   <?php echo $product['description']?>
-                  </br>
+                  <br>
                   </br>
                   id #<?php echo $product['productId']?>
                 </figcaption>
@@ -50,7 +50,7 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
         </ul>
       </div>
     </div>
-
+</div>
     <?php include 'inc/footer.inc.php'; ?>
     <script type="text/javascript" src="jqhome.js"></script>
     <script type="text/javascript" src="formjsfile"></script>

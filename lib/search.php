@@ -1,10 +1,8 @@
-
+<!DOCTYPE html>
 <?php
 require "inc/db.inc.php";
 
-?>
-
-    <!DOCTYPE html>
+?>s
     <html>
 
     <head>

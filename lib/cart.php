@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 // checks if a session is already started and if none is started then it starts one.
 

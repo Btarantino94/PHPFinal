@@ -29,7 +29,7 @@ include 'inc/header.inc.php';
             <h1 class="homepage_hero_headline">Half off All Halloween Tees</h1>
             <p id="subtext"> Sale is online only!</p>
             <div class="topad_con">
-            <a href="featured.php"><figure><img src="img/halload.jpg"></figure></a>
+            <a href="featured.php"><figure><img src="img/halload.jpg" alt="halloween banner"></figure></a>
           </div>
          </div>
          <!-- container end -->
@@ -41,28 +41,28 @@ include 'inc/header.inc.php';
       <!-- product slide imgs start -->
       <section id="productslide">
       <a href="featured.php"><div class="featured">
-           <img src="img/featured/beat.jpg">
-           <img src="img/featured/dab.jpg">
-           <img src="img/featured/freehugs.jpg">
-           <img src="img/featured/ffstar.jpg">
-           <img src="img/featured/kill.jpg">
-           <img src="img/featured/sk.jpg">
-           <img src="img/featured/misfit.jpg">
-           <img src="img/featured/nightbat.jpg">
-           <img src="img/featured/ship.jpg">
+           <img src="img/featured/beat.jpg" alt="featured shirt">
+           <img src="img/featured/dab.jpg" alt="featured shirt">
+           <img src="img/featured/freehugs.jpg" alt="featured shirt">
+           <img src="img/featured/ffstar.jpg" alt="featured shirt">
+           <img src="img/featured/kill.jpg" alt="featured shirt">
+           <img src="img/featured/sk.jpg" alt="featured shirt">
+           <img src="img/featured/misfit.jpg" alt="featured shirt">
+           <img src="img/featured/nightbat.jpg" alt="featured shirt">
+           <img src="img/featured/ship.jpg" alt="featured shirt"> 
       </div></a>
       </section>
       <!-- product slide imgs end -->
       <div class="ad_con">
-           <a href="topsellers.php"><figure id="starwars"><img src="img/star_wars_ad.jpg"></figure></a>
+           <a href="topsellers.php"><figure id="starwars"><img src="img/star_wars_ad.jpg" alt="star wars banner"></figure></a>
       </div>
            <div id="missing_container">
          <p id="missing_out">YOU'RE MISSING OUT<p>
-        <p id="missing_text">Stay up to date with our exclusive products, contests, giveaways and everything that is awesome!
-          Subscribe to our newsletter below and start receiving all the hand-picked products and other geeky awesomeness straight in your inbox. <a href="contact.php">Here!</a></p>
+        <h2 id="missing_text">Stay up to date with our exclusive products, contests, giveaways and everything that is awesome!
+          Subscribe to our newsletter below and start receiving all the hand-picked products and other geeky awesomeness straight in your inbox. <a href="contact.php">Here!</a></h2>
       </div>
       <div class="ad_con">
-           <a href="new.php"><figure id="comingsoon"><img src="img/coming.jpg"></figure></a>
+           <a href="new.php"><figure id="comingsoon"><img src="img/coming.jpg" alt="coming soon banner"></figure></a>
       </div>
       <!-- product slide jquery start -->
       <script type="text/javascript">

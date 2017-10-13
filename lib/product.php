@@ -36,10 +36,10 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
               <figure>
                 <img class="img-responsive" src='<?php echo $product['image']?>'>
                 <figcaption>Price $<?php echo $product['price']?>
-                  </br>
+                  <br>
                   </br>
                   <?php echo $product['description']?>
-                  </br>
+                  <br>
                   </br>
                   id #<?php echo $product['productId']?>
                 </figcaption>
@@ -56,7 +56,7 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
       <ul>
           <li><a href=""><span></span>New Arivals</a></li>
             <li><a href=""><span></span>Sale Items</a></li>
-            <li><a href=""><span></span>Top Sellers</a></li>
+            <li><a href=""><></span>Top Sellers</a></li>
             <li><a href=""><span></span>T-shirts</a></li>
             <li><a href=""><span></span>Baseball Shirts</a></li>
             <li><a href=""><span></span>Tights</a></li>
