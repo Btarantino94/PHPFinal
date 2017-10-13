@@ -91,7 +91,7 @@ catch(PDOException $e){
                     </div>
                     <div class="product_info">
                         <h1>
-                            <?php echo $product[0]['name'] ?> Shirt</h1>
+                            <?php echo $product[0]['name'] ?></h1>
                         <div class="price">
                             <h2 class="original_price">$
                                 <?php echo $product[0]['price'] ?>
@@ -110,7 +110,7 @@ catch(PDOException $e){
 
                         <!-- form starts here -->
                         <div class="product-item">
-                            <form method="post" action="cart.php">
+                            <form method="get" action="cart.php">
                                 <div class="options">
                                     <div class="buying_options">
                                         <div class="select">

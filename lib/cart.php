@@ -1,23 +1,22 @@
-
 <?php
-
 // checks if a session is already started and if none is started then it starts one.
 
 session_start();
-var_dump($_SESSION);
+
 // used required_once to check if the file has already been included, and if so, not include (require) it again.
-echo 'hi';
+
 require_once ("inc/db.inc.php");
 
 
 // php function to clean up a string from a user to make it safe for a database
-$action = filter_var($_POST['action'], FILTER_SANITIZE_STRING);
-$productId = filter_var($_POST['productId'], FILTER_SANITIZE_STRING);
-$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-$quantity = filter_var($_POST['quantity'], FILTER_SANITIZE_STRING);
-$price = filter_var($_POST['price'], FILTER_SANITIZE_STRING);
-echo 'hi';
-//var_dump($quantity);die();
+$action = filter_var($_GET['action'], FILTER_SANITIZE_STRING);
+$productId = filter_var($_GET['productId'], FILTER_SANITIZE_STRING);
+$name = filter_var($_GET['name'], FILTER_SANITIZE_STRING);
+$quantity = filter_var($_GET['quantity'], FILTER_SANITIZE_STRING);
+$price = filter_var($_GET['price'], FILTER_SANITIZE_STRING);
+
+//if action is not empty switch (switch is similar to a series of IF statements on the same expression) action else if add is used then add to cart or else if remove is used remove items from cart.
+// switch/case is like "if else if" it does loose comparison.
 
 if (!empty($action)) {
 	switch ($action) {
@@ -26,19 +25,16 @@ if (!empty($action)) {
 		break;
 
 	case "remove":
-		removeItemsfromCart();
+		removeItemsfromCart($productId);
 		break;
 
 	case "empty":
-		// unset($_SESSION["cart_items"]);
+		unset($_SESSION["cart_items"]);
 		break;
 	}
-}
-echo 'hi';
 
-// if (!empty($_POST)) {
-// 	addItemtoCart($productId, $quantity);
-// }
+}
+
 
 // this func adds items to cart
 
@@ -48,8 +44,7 @@ function addItemtoCart($productId, $quantity){
 
 	global $db;
 
-	// echo 'quantity: ' . $quantity;
-
+//An exception can be thrown, and caught ("catched") within PHP. Code may be surrounded in a try block, to make it easier to catch the potential exceptions. Each try must have at least one corresponding catch or finally block.
 	if ($quantity > 0) {
 		try {
 
@@ -68,14 +63,15 @@ function addItemtoCart($productId, $quantity){
 		}
 
 		// item array is an array of each product including id, name, quantity, and price.
-
-		$itemArray = array(
-			$products[0]["productId"] => array(
+		$item = array(
 				'name' => $products[0]["name"],
 				'productId' => $products[0]["productId"],
 				'quantity' => $quantity,
 				'price' => $products[0]["price"]
-			)
+			);
+
+		$itemArray = array(
+			$products[0]["productId"] => $item
 		);
 		if (!empty($_SESSION["cart_items"])) {
 
@@ -96,7 +92,7 @@ function addItemtoCart($productId, $quantity){
 					}
 				}
 			}else{
-				$_SESSION["cart_items"] = array_push($_SESSION["cart_items"], $itemArray);
+				$_SESSION["cart_items"][$productId] = $item;
 			}
 		}else{
 			$_SESSION["cart_items"] = $itemArray;
@@ -105,39 +101,42 @@ function addItemtoCart($productId, $quantity){
 		echo 'not running';
 	}
 }
-echo 'hi';
 
-function removeItemsfromCart(){
+//function to remove cart items
+function removeItemsfromCart($productId){
 
 	if (!empty($_SESSION["cart_items"])) {
 			foreach($_SESSION["cart_items"] as $k => $v) {
-				if ($productId == $k . productId) unset($_SESSION["cart_items"][$k]);
-				print_r($_SESSION["cart_items"]);
-				if (empty($_SESSION["cart_items"])) unset($_SESSION["cart_items"]);
-				print_r($_SESSION["cart_items"]);
+				if ($k == $productId) unset($_SESSION["cart_items"][$k]);
+				// print_r($_SESSION["cart_items"]);
+				// echo "$k";
+				// if (empty($_SESSION["cart_items"])) unset($_SESSION["cart_items"]);
+				// print_r($_SESSION["cart_items"]);
 			}
 		}
 }
-echo 'hi';
 
 ?>
 <html>
 <head>
-<title>Cart</title>
-<link href="style.css" type="text/css" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/reset.css" />
+  <link type="text/css" rel="stylesheet" href="/PHPFinal/lib/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <title>Cart</title>
 </head>
-
+<?php include 'inc/header.inc.php'; ?>
 <body>
 <div id="shopping-cart">
-<!-- <div class="cart-heading">Shopping Cart <a id="btnEmpty" href="cart.php?action=empty">Empty Cart</a></div> -->
+<div>
+	<p class="cart-heading">Shopping Cart</p>
 <?php
-echo 'hi';
+
 
 if (isset($_SESSION["cart_items"])) {
 	$item_total = 0;
 
 ?>	
-<table cellpadding="10" cellspacing="1">
+<table class="table_cart" cellpadding="10" cellspacing="1">
 <tbody>
 <tr>
 <th class="cart_th"><strong>Name</strong></th>
@@ -152,16 +151,24 @@ if (isset($_SESSION["cart_items"])) {
 ?>
 
 				<tr>
-				<td class="cart_td" style="text-align:left;border-bottom:#F0F0F0 1px solid;"><strong><?php
-		echo $item["name"]; ?></strong></td>
-				<td class="cart_td"><?php
-		echo $item["productId"]; ?></td>
-				<td class="cart_td"><?php
-		echo $item["quantity"]; ?></td>
-				<td class="cart_td"><?php
-		echo "$" . $item["price"]; ?></td>
-				<td class="cart_td"><a href="cart.php?action=remove&productId=<?php
-		echo $item["productId"]; ?>" class="btnRemoveAction">Remove Item</a></td>
+					<td class="cart_td">
+						<strong><?php echo $item["name"]; ?></strong>
+					</td>
+					<td class="cart_td">
+						<?php echo $item["productId"]; ?>
+					</td>
+					<td class="cart_td">
+						<?php echo $item["quantity"]; ?>
+					</td>
+					<td class="cart_td">
+						<?php echo "$" . $item["price"]; ?>
+					</td>
+					<td class="cart_td">
+						<a href="cart.php?action=remove&productId=
+						<?php echo $item["productId"]; ?>" class="btnRemoveAction">
+							Remove Item
+						</a>
+					</td>
 				</tr>
 				<?php
 		$item_total+= ($item["price"] * $item["quantity"]);
@@ -175,45 +182,17 @@ if (isset($_SESSION["cart_items"])) {
 </tr>
 </tbody>
 </table>		
-
 </div>
-
-<div id="product-grid">
-	<!-- <div class="txt-heading">Products</div>
- -->	<?php
-
-// $product_array = $db_handle->runQuery("SELECT * FROM my_products ORDER BY productId ASC");
-
-$stmt = $db->prepare("SELECT productId, name, price FROM my_products");
-$stmt->execute();
-
-// echo "puke";
-// set the resulting array to associative
-
-$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k => $v) {
-	echo $v;
-}
-
-if (!empty($product_array)) {
-	foreach($product_array as $key => $value) {
-?>
-		<!-- form in divs on pdetail.php -->
-	<?php
-	}
-}
-
-?>
+</div>
 
   <?php
-  echo 'session<br />';
+  // echo 'session<br />';
 
-  var_dump($_SESSION);
 }
 
 ?>
+<!-- </div> -->
+<?php include 'inc/footer.inc.php'; ?>
 
-</div>
 </body>
 </html>

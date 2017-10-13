@@ -1,7 +1,7 @@
 <footer>
 <section id="footer_container">
    <div class="free">
-       <figure><img src="img/freeTee.jpg"></figure>
+       <a href="product.php"><figure><img src="img/freeTee.jpg"></figure></a>
    </div>
    <div id="icon_con">
       <ul>

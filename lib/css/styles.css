@@ -45,6 +45,9 @@
 #logo_con{
   width: 162px;
 }
+/*.icon_container :hover{
+background-color: red;  
+}*/
 /******************************logo end******************************/
 
 /******************************nav start******************************/
@@ -52,8 +55,8 @@ nav {
     display: inline-block;
     margin: 0 auto;
     font-family: 'Kaushan Script', cursive;
+          border-bottom: #c9272d 2px solid;
 }
-
 nav li {
     display: inline-block;
     
@@ -90,6 +93,8 @@ nav li {
 .topnav li {
  padding-right: 5px;
 }
+/*The !important rule is a way to make your CSS cascade but also have the rules you feel are most crucial always be applied. 
+A rule that has the !important property will always be applied no matter where that rule appears in the CSS document.*/
 .topnav li a:hover,
 .topnav li li a:hover {
  color: #fff !important;
@@ -275,10 +280,16 @@ footer {
 
 .search__headline{
   font-family: 'Kaushan Script', cursive;
-  font-size: 30px;
+  font-size: 42px;
   text-align: center;
   color: #c9262c;
-
+  margin-bottom: 2%;
+}
+#sub_search{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 2%;
 }
 .search {
     width: 100%;
@@ -319,6 +330,16 @@ footer {
     transform: translate(-50%, -50%);
     margin: 9% 30% 43% 18%;
 }
+.search_con{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 20%;
+}
+.search_con form figure img p{
+  text-align: center;
+    margin-top: 5%;
+    background-color: red;
+} 
 /*******************************search page ends*******************************/
 
 /********************************pdetail page start****************************/
@@ -765,7 +786,9 @@ figcaption{
 /* .colors ul, .sizes ul{
   float:left; width:130px;  
 } */
-.colors ul li{padding-left:21px;}
+.colors ul li{
+  padding-left:21px;
+}
 .colors a span{
   border:none;
   position:relative;
@@ -778,30 +801,49 @@ figcaption{
   width:15px;
   height:15px;
 }
-#sidebar img{margin-top:6px;}
+#sidebar img{
+  margin-top:6px;
+}
 /*****************************side bar end****************************************/
 
 /*****************************Cart Page Start****************************************/
-#shopping-cart{
-  margin 0 auto;
-}
 .cart-heading{
   font-family: 'Kaushan Script', cursive;
+  font-size: 42px;
+  text-align: center;
+  color: #c9262c;
+  margin-top: 7%;
+}
+/*#btnEmpty:hover{
+  color: #c9262c;
+}*/
+.cart_th{
+  font-family: 'Kaushan Script', cursive;
+  font-size: 20px;
+  text-align: center;
+  padding: 5%;
+}
+.cart_td{
+  text-align: center;
+  border-bottom:#F0F0F0 1px solid;
+}
+#product-grid{
+  margin: 0 auto;
+}
+.txt-heading{
+    font-family: 'Kaushan Script', cursive;
   font-size: 30px;
   text-align: center;
   color: #c9262c;
+  margin-top: 7%;
 }
-#btnEmpty{
-  margin: 0 auto;
+.table_cart {
+    text-align: center;
+    border-bottom: #c9272d 1px solid;
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 17%;
 }
-.cart_th{
-  text-align:center;
-}
-.cart_td{
-  text-align:left;
-  border-bottom:#F0F0F0 1px solid;
-}
-
 /*****************************Cart Page End****************************************/
 
 /*****************************Help Page Start****************************************/
@@ -809,13 +851,23 @@ figcaption{
   margin: 0 auto;
 }
 #Help_title{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: #c9262c;
+    margin-top: 4%;
+    margin-bottom: 10%;
+}
+.sub_hel{
+    margin: 1%;
+  font-size: 20px;
+  margin: 0 0 20px;
   font-family: 'Kaushan Script', cursive;
-  font-size: 30px;
-  text-align: center;
-  color: #c9262c;
 }
 #Help{
- margin: 0 auto; 
+ padding-left: 17%;
+ padding-right: 15%;
+
 }
 .form_header{
     font-size: 42px;
@@ -827,21 +879,20 @@ figcaption{
 }
 .form-wrapper {
   width: 70%;
-  margin: 0 auto;
- /* text-align: center;*/
-  margin-top: 25px;
+  margin: 0 auto;     
+  margin-top: 35px;
 }
 .form-text {
-  width: 100%;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 16px;
-  border-color: #ccc;
-  margin-top: 2%;
-  padding-left: 5px;
-  color: rgb(58, 58, 58);
-  -webkit-appearance: none;
+    width: 100%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    border-color: #ccc;
+    margin-top: 2%;
+    color: rgb(58, 58, 58);
+    -webkit-appearance: none;
+    line-height: 2;
 }
 .form-text:focus {
   border-color: rgb(83, 144, 234);
@@ -887,17 +938,22 @@ figcaption{
   /* Microsoft Edge */
   color: rgb(58, 58, 58);
 }
-
 /*****************************Help Page End****************************************/
 
 /*****************************contact page start****************************************/
-#contact_title h1{
+#contact_title{
   font-size: 42px;
   margin: 0 0 20px;
   color: #c9262c;
   font-family: 'Kaushan Script', cursive;
   position: relative;
   display: inline-block;
+  margin-top: 2%;
+}
+#row{
+    margin-bottom: 30%;
+    max-width: 60%;
+    margin-left: 19%;
 }
 #contact_page{
   margin: 0 auto;
@@ -908,6 +964,21 @@ figcaption{
 #contact-first{
   margin: 0 auto;
 }
+.sub_contact{
+  margin: 1%;
+  font-size: 20px;
+  margin: 0 0 20px;
+  font-family: 'Kaushan Script', cursive;
+}
+.quest_title{
+  margin-top: 1%;
+  margin-bottom: 2%;
+  font-size: 17px;
+  text-align: center;
+  line-height: 1.5;
+  color: #c9262c;
+  font-family: 'Kaushan Script', cursive;
+}
 #contact {
   text-align: center;
   line-height: 1.5;
@@ -916,20 +987,32 @@ figcaption{
   margin-bottom: 70px;
 }
 .contact_ques{
-  text-align: left;
-  line-height: 1.5;
-  padding-left: 100px;
-  padding-right: 100px;
-  margin-bottom: 70px;
+    font-size: 15px;
+    font-family: 'Kaushan Script', cursive;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 19%;
+    padding-right: 18%;
+    margin-bottom: 5%;
 }
 .contact_ans{
- text-align: left;
-  line-height: 1.5;
-  padding-left: 100px;
-  padding-right: 100px;
-  margin-bottom: 70px; 
+    font-size: 15px;
+    font-family: 'Kaushan Script', cursive;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 19%;
+    padding-right: 18%;
+    margin-bottom: 5%;
 }
-
+.contact_help{
+    font-size: 15px;
+    font-family: 'Kaushan Script', cursive;
+    text-align: left;
+    line-height: 1.5;
+    padding-left: 19%;
+    padding-right: 18%;
+    margin-bottom: 5%;
+}
 
 /* Mobile and tablet configs */
 

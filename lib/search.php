@@ -27,9 +27,9 @@ include 'inc/header.inc.php';
 ?>
             <!-- header end -->
     <section>
-        <div class="container align-center">
+        <div class="search_con">
             <h2 class="search__headline">Looking for something? Search here.</h2>
-            <p>You may search either by category, name or price.</p>
+            <p id="sub_search">You may search either by category, name or price.</p>
             
             <!-- form starts here -->
             <form method="_GET" action="search.php">
@@ -42,7 +42,7 @@ include 'inc/header.inc.php';
                         //strip_tags — Strip HTML and PHP tags from a string
                         $type = strip_tags($_GET['search_Bar']);
                         //selecting all products from my name col and allowing wildcards to be searched.
-                        $products = "SELECT * FROM my_products WHERE name LIKE '%{$type}%' OR description LIKE '%{$type}%' OR price LIKE '%{$type}%'";
+                        $products = "SELECT * FROM my_products WHERE name LIKE '%{$type}%' OR description LIKE '%{$type}%' OR price LIKE '%{$type}%' OR color LIKE '%{$type}%'";
                         //preparing mysql
                         $product_Inv = $db->prepare($products);
                         //executing my prepare

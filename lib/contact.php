@@ -28,22 +28,21 @@
       <div class="container-fluid" id="contact">
          <h1 id="contact_title">Contact Us!</h1>
          <div id="contact-first">
-            <p>Need to get in touch with our customer service peeps? We are here to help!</p>
+            <p class="sub_contact">Need to get in touch with our customer service peeps? We are here to help!</p>
             <div>
-            <p class="contact_ques">Frequently Asked Questions:</p>
-            <p>What's your return policy, or how do I return something?</p>
+            <p class="quest_title">Frequently Asked Questions:</p>
+            <p class="contact_ques">What's your return policy, or how do I return something?</p>
             <p class="contact_ans">~You can't. We don't except returns.</p>
             <p class="contact_ques">When will I get my shipment?</p>
             <p class="contact_ans">~Most shipments leave our warehouse within 1-2 business days of placing your order. You will also need to consider the transit time for the shipping method you chose..</p>
             </div>
             <p class="form_header">NEED MORE HELP?</p>
-            <p>Send us an email below or contact us by Snail Mail or Phone:</p>
-            <p>Phone #: 1-800-GEEK CHIC1</p>
-            <p>Address: GeekChic, Inc. 224 TooHigh Rd Suite 100 FortMill, SC 28055s</p>
-            <div class="row" id="form-wrapper">
+            <p class="contact_help">Send us an email below or contact us by Snail Mail or Phone: Phone #: 1-800-GEEK CHIC1</p>
+            <p class="contact_help">Address: GeekChic, Inc. 224 ToHire Rd Suite 100 FortMill, SC 28055s</p>
+            <div id="row">
                <form method="POST" autocomplete="on" id="contact-form" name="contact-form" action="https://formspree.io/britanny_tea2@aol.com">
                   <!--  in the input below I am giving the input a class col-md-6 and col-sm-12  which will span half the screen on mobile phone (md) and 1/2 of the screen on tablets(sm) -->
-                  <input class="col-md-6 col-sm-12" id="form-name" name="name" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('Please complete this field.')" placeholder="Name" required="" type="text">
+                  <input class="col-md-6 col-sm-12" id="form-name" name="name" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('Please complete this field.')" placeholder="First Name Last Name" required="" type="text">
                   <input class="col-md-6 col-sm-12" id="form-email" name="email" placeholder="Email" required="" type="email">
                   <textarea class="col-sm-12" id="form-text" name="message" placeholder="Message" required=""></textarea>
                   <br>

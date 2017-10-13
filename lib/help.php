@@ -55,16 +55,16 @@
 
                 <form class="form-wrapper" name="form" action="help.php"  method="POST">
                    <div id="help_first">
-                      <p>one of our customer service peeps will get back to you fast. We aim to respond to all email within 24 hours.</p>
+                      <p class="sub_hel">one of our customer service peeps will get back to you fast. We aim to respond to all email within 24 hours.</p>
                     <div class="form-text">
-                      <label for="fname">First Name<input type="text" id="fname" name="firstname" placeholder="First Name" required/></label>
+                      <label for="fname">First Name<input type="text" id="fname" name="firstname" placeholder="John" required/></label>
                     </div>
                     <div class="form-text">
                       <label for="lname">Last Name</label>
-                      <input type="text" id="lname" name="lastname" placeholder="Last Name" required/>
+                      <input type="text" id="lname" name="lastname" placeholder="Smith" required/>
                     </div>
                     <div class="form-text">
-                      <label for="email">Email<input type="email" id="email" name="email" placeholder="Email" required/></label>
+                      <label for="email">Email<input type="email" id="email" name="Geekchic@email.com" placeholder="Email" required/></label>
                     </div>
                     <div class="form-text">
                       <p>Question:</p>

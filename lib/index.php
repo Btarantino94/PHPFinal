@@ -29,7 +29,7 @@ include 'inc/header.inc.php';
             <h1 class="homepage_hero_headline">Half off All Halloween Tees</h1>
             <p id="subtext"> Sale is online only!</p>
             <div class="topad_con">
-            <figure><img src="img/halload.jpg"></figure>
+            <a href="featured.php"><figure><img src="img/halload.jpg"></figure></a>
           </div>
          </div>
          <!-- container end -->
@@ -54,7 +54,7 @@ include 'inc/header.inc.php';
       </section>
       <!-- product slide imgs end -->
       <div class="ad_con">
-           <figure id="starwars"><img src="img/star_wars_ad.jpg"></figure>
+           <a href="topsellers.php"><figure id="starwars"><img src="img/star_wars_ad.jpg"></figure></a>
       </div>
            <div id="missing_container">
          <p id="missing_out">YOU'RE MISSING OUT<p>
@@ -62,7 +62,7 @@ include 'inc/header.inc.php';
           Subscribe to our newsletter below and start receiving all the hand-picked products and other geeky awesomeness straight in your inbox. <a href="contact.php">Here!</a></p>
       </div>
       <div class="ad_con">
-           <figure id="comingsoon"><img src="img/coming.jpg"></figure>
+           <a href="new.php"><figure id="comingsoon"><img src="img/coming.jpg"></figure></a>
       </div>
       <!-- product slide jquery start -->
       <script type="text/javascript">
