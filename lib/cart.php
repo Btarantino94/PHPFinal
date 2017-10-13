@@ -4,9 +4,9 @@
 // checks if a session is already started and if none is started then it starts one.
 
 session_start();
-
+var_dump($_SESSION);
 // used required_once to check if the file has already been included, and if so, not include (require) it again.
-
+echo 'hi';
 require_once ("inc/db.inc.php");
 
 
@@ -16,7 +16,7 @@ $productId = filter_var($_POST['productId'], FILTER_SANITIZE_STRING);
 $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 $quantity = filter_var($_POST['quantity'], FILTER_SANITIZE_STRING);
 $price = filter_var($_POST['price'], FILTER_SANITIZE_STRING);
-
+echo 'hi';
 //var_dump($quantity);die();
 
 if (!empty($action)) {
@@ -30,10 +30,11 @@ if (!empty($action)) {
 		break;
 
 	case "empty":
-		unset($_SESSION["cart_items"]);
+		// unset($_SESSION["cart_items"]);
 		break;
 	}
 }
+echo 'hi';
 
 // if (!empty($_POST)) {
 // 	addItemtoCart($productId, $quantity);
@@ -81,7 +82,7 @@ function addItemtoCart($productId, $quantity){
 			// in_array — Checks if a value exists in an array.
 			// array_keys — Return all the keys or a subset of the keys of an array.
 
-			if (in_array($products[0]["productId"], array_keys($_SESSION["cart_items"]))) {
+			if (in_array($products[0]["productId"], array_keys($_SESSION["cart_items"]))) { // check this
 
 				// $k is the key, $v is the value, and I'm looping through each separate pair with a foreach.
 
@@ -95,7 +96,7 @@ function addItemtoCart($productId, $quantity){
 					}
 				}
 			}else{
-				$_SESSION["cart_items"] = array_merge($_SESSION["cart_items"], $itemArray);
+				$_SESSION["cart_items"] = array_push($_SESSION["cart_items"], $itemArray);
 			}
 		}else{
 			$_SESSION["cart_items"] = $itemArray;
@@ -104,6 +105,7 @@ function addItemtoCart($productId, $quantity){
 		echo 'not running';
 	}
 }
+echo 'hi';
 
 function removeItemsfromCart(){
 
@@ -116,6 +118,7 @@ function removeItemsfromCart(){
 			}
 		}
 }
+echo 'hi';
 
 ?>
 <html>
@@ -128,9 +131,11 @@ function removeItemsfromCart(){
 <div id="shopping-cart">
 <!-- <div class="cart-heading">Shopping Cart <a id="btnEmpty" href="cart.php?action=empty">Empty Cart</a></div> -->
 <?php
+echo 'hi';
 
 if (isset($_SESSION["cart_items"])) {
 	$item_total = 0;
+
 ?>	
 <table cellpadding="10" cellspacing="1">
 <tbody>
@@ -170,10 +175,7 @@ if (isset($_SESSION["cart_items"])) {
 </tr>
 </tbody>
 </table>		
-  <?php
-}
 
-?>
 </div>
 
 <div id="product-grid">
@@ -200,6 +202,14 @@ if (!empty($product_array)) {
 		<!-- form in divs on pdetail.php -->
 	<?php
 	}
+}
+
+?>
+
+  <?php
+  echo 'session<br />';
+
+  var_dump($_SESSION);
 }
 
 ?>

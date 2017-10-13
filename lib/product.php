@@ -99,9 +99,8 @@ $products = $sql->fetchAll(PDO::FETCH_ASSOC);
      <h3>PRICE RANGE</h3>
      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/price-range.png" alt="" />
 </div>
-
-<div id="grid-selector">
     </section>
+</div>
 
     <?php include 'inc/footer.inc.php'; ?>
     <script type="text/javascript" src="jqhome.js"></script>

@@ -23,7 +23,6 @@
 include 'inc/header.inc.php';
  ?>
 <!-- header end -->
-      <figure id="balloon"><img src="img/salebal.png"></figure>
 
       <section id="homepage_hero">
          <div class="container align-center">
@@ -37,6 +36,7 @@ include 'inc/header.inc.php';
       </section>
       <div>
         <p id="feat_title"> This Month's Featured Products</p>
+        <p id="feat_sub"> The creepy, the funny, the hallows eve shirt variety</p>
       </div>
       <!-- product slide imgs start -->
       <section id="productslide">
@@ -55,6 +55,13 @@ include 'inc/header.inc.php';
       <!-- product slide imgs end -->
       <div class="ad_con">
            <figure id="starwars"><img src="img/star_wars_ad.jpg"></figure>
+      </div>
+           <div id="missing_container">
+         <p id="missing_out">YOU'RE MISSING OUT<p>
+        <p id="missing_text">Stay up to date with our exclusive products, contests, giveaways and everything that is awesome!
+          Subscribe to our newsletter below and start receiving all the hand-picked products and other geeky awesomeness straight in your inbox. <a href="contact.php">Here!</a></p>
+      </div>
+      <div class="ad_con">
            <figure id="comingsoon"><img src="img/coming.jpg"></figure>
       </div>
       <!-- product slide jquery start -->
@@ -70,12 +77,6 @@ include 'inc/header.inc.php';
       });
       </script>
        <!-- product slide jquery end -->
-    
-      <div id="missing_container">
-         <p id="missing_out">YOU'RE MISSING OUT<p>
-        <p id="missing_text">Stay up to date with our exclusive products, contests, giveaways and everything that is awesome!
-Subscribe to our newsletter below and start receiving all the hand-picked products and other geeky awesomeness straight in your inbox. <a href="contact.php">Here!</a></p>
-      </div>
          
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>

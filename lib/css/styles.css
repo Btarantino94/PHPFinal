@@ -77,26 +77,60 @@ nav li {
     position: absolute;
     top: 19px;
     left: -27px;
-    background: #c9262c;
+    background: #c9272d;
     padding: 4px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.6);
     z-index: 1;
-    border-radius: 20%;
 }
 
 .topnav li:hover .topnav-dropdown {
   display: block;
 }
-/*.container{
-  border-color: green;
+
+.topnav li {
+ padding-right: 5px;
+}
+.topnav li a:hover,
+.topnav li li a:hover {
+ color: #fff !important;
+}
+.topnav li a:hover {
+ background: #c9272d !important; /*** CHANGES THE BACKGROUND COLOR ON HOVER ***/
+}
+/*.topnav li.current-menu-item > a {
+ background: blue; ** CHANGES THE BACKGROUND COLOR OF THE CURRENT PAGE LINK **
+}
+.topnav .menu-item-has-children > a:first-child:after {
+ content: none;
 }*/
+
 /*******************************nav end*******************************/
 
 /******************************footer start******************************/
+#footer_container{
+margin: 0 auto;
+width: 100%;
+background-color: #eeeeee;
+}
+.free{
+  width: 100%;
+  background-color: #1f1f1f;
+  padding-top: .3%;
+}
+
 footer {
     display: block;
     clear: both;
     text-align: center;
+}
+#icon_con{
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+.footer_text{
+  line-height: 2.1;
+
 }
 /*****icons*****/
 .icon-container {
@@ -124,6 +158,18 @@ footer {
 }
 /*****youtube icon*****/
 .yt-icon-img {
+    width: 33px;
+    height: 33px;
+}
+.xb-icon-img {
+    width: 33px;
+    height: 33px;
+}
+.cp-icon-img {
+    width: 33px;
+    height: 33px;
+}
+.gh-icon-img {
     width: 33px;
     height: 33px;
 }
@@ -164,6 +210,13 @@ footer {
     text-shadow: 1px 2px 1px rgba(191, 99, 25, .8);
     font-family: 'Kaushan Script', cursive;
 }
+#feat_sub{
+    color: #000;
+    line-height: 1;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
 
 .featured {
     width: 100%;
@@ -181,15 +234,6 @@ footer {
     overflow-x: hidden;
     margin-top: 4%;
 }
-.free{
-  margin-bottom: 2%;
-}
-#balloon{
-    width: 138px;
-    position: absolute;
-    left: 58.6%;
-    top: 21.5%;
-}
 #comingsoon{
   max-width: 100%;
   padding-left: 2%;
@@ -201,18 +245,25 @@ footer {
 .ad_con{
   max-width: 100%;
   background-color: black;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 .topad_con{
   max-width: 100%;
   background-color: #27140a;
 }
 #missing_container{
-  margin-top: 2%;
-  margin-bottom: 2%;
+  padding-top: 3.3%;
+  padding-bottom: 3.3%;
   max-width: 100%;
-  background-color: #eee;
+  background-color: #c9262c;
   text-align: center;
   color: #000;
+  line-height: 2;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  
 }
 /*******************************homepage end*******************************/
 
@@ -544,7 +595,9 @@ img{
   position: relative;
   display: inline-block;
 }
-
+.product_tag{
+  text-decoration: none;
+}
 .myproducts > ul {
   margin-bottom: 0;
   padding-left: 15px;
@@ -589,6 +642,7 @@ display: block;
 }
 .product_body{
 margin: 0 auto;
+text-decoration: none;
 }
 
 /*.myproducts > ul > li:hover > img {
@@ -604,18 +658,18 @@ figcaption{
 
 /*****************************sidebar start****************************************/
 #sidebar {
-  position: fixed;
-  top: 50px;
-  left: 220px;
-  width: 220px;
-  margin-left: -220px;
-  border: 1px solid #c9272d;
-  border-radius: 0;
-  overflow-y: auto;
-  background-color: #ffffff;
-  bottom: 25%;
-  overflow-x: hidden;
-  padding-bottom: 30px;
+    position: relative;
+    top: 200px;
+    left: 220px;
+    width: 200px;
+    max-width: 220px;
+    margin-left: -220px;
+    border: 1px solid #c9272d;
+    border-radius: 0;
+    overflow-y: auto;
+    background-color: #ffffff;
+     overflow-x: hidden; 
+    padding-bottom: 30px;
 }
 .checklist ul li{ 
   font-size:14px;
