@@ -20,6 +20,7 @@
       <h1 id="Help_title">ASK US A QUESTION</h1>
       <div id="Help">
             <?php
+            error_reporting(0);
                  if(!empty($_POST)){
                   try
                   {
